@@ -1,0 +1,120 @@
+.home-technologies-section__list {
+  .slick-list {
+    overflow: hidden;
+  }
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+  .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45px;     
+  }
+  .slick-dots li {
+    padding: 0;
+    margin: 0 10px;   
+  }
+  .slick-dots li button {
+    font-size: 0;
+    background: $color-bg-items-2;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    cursor: pointer;
+    &:hover,
+    &:active,
+    &:focus {
+      background: $color-secondary;
+    }
+    @media (max-width: 450px){
+      max-width: 10px;
+    height: 10px;
+    }
+  }
+  .slick-dots li.slick-active button{
+    background-color: $color-secondary;
+  }
+}
+//=============================================
+.home-section_list-reviews {
+  .slick-list {
+    overflow: hidden;
+  }
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+  .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45px;     
+  }
+  .slick-dots li {
+    padding: 0;
+    margin: 0 10px;   
+  }
+  .slick-dots li button {
+    font-size: 0;
+    background: $color-bg-items-3;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    cursor: pointer;
+    &:hover,
+    &:active,
+    &:focus {
+      background: $color-secondary;
+    }
+    @media (max-width: 450px){
+      max-width: 10px;
+    height: 10px;
+    }
+  }
+  .slick-dots li.slick-active button{
+    background-color: $color-secondary;
+  }
+}
+.testimonials-clients_list-reviews{
+  .slick-list {
+    overflow: hidden;
+    
+  }
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+  .slick-dots {
+    display: flex;
+    align-items: center;
+    @include breakpoint(Lg) {
+      justify-content: center;
+    }
+  }
+  .slick-dots li {
+    padding: 0;
+    margin: 0 10px;   
+  }
+  .slick-dots li button {
+    font-size: 0;
+    background: $color-bg-items-3;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    cursor: pointer;
+    &:hover,
+    &:active,
+    &:focus {
+      background: $color-secondary;
+    }
+  }
+  .slick-dots li.slick-active button{
+    background-color: $color-secondary;
+  }
+}
+//==========================infinite-scroll-bg

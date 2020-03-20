@@ -1,0 +1,346 @@
+//==============================testimonials-header-section
+.testimonials-content-wrapper{
+  .sbs-info-section {
+  background-color: $color-bg-items-2;
+} 
+}
+
+.testimonials-header-section {
+  position: relative;
+  min-height: 600px;
+}
+//===============================testimonials-clients-section
+.testimonials-clients-section {
+  position: relative;
+  background-color: $color-bg-items-2;
+  // min-height: 849px;
+  @include verticalPad;
+  @include breakpoint(Tablet) {
+    padding-top: 100px;
+  }
+  .part-left {
+    position: relative;
+    .testimonials-clients-slider_wrapper {
+      max-width: 50%;
+
+      @include breakpoint(Lg) {
+        max-width: 100%;
+        margin-top: 0;
+        padding-right: 0;
+        padding-bottom: 15px;
+        text-align: center;
+      }
+      .testimonials-clients_list-reviews {
+        min-width: 0;
+        margin-right: 40px;
+       min-height: 333px;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       @include breakpoint(Lg) {
+        margin-right: 0;
+        min-height: 280px;
+        margin-bottom: 20px;
+      }
+        .clients-review {
+          display: flex;
+          flex-direction: column;
+        }
+        .autor-review {
+          @include heading-Level-3_1;
+          @include breakpoint(Sm) {
+            font-size: 1rem;
+          }
+        }
+        .autor-position {
+          @include text-items;
+          @include breakpoint(Sm) {
+            font-size: 1rem;
+          }
+        }
+        .autor-text {
+          max-width: 500px;
+          @include text-items;
+          @include breakpoint(Lg) {
+            margin: 0 auto;
+          }
+          @include breakpoint(Sm) {
+            font-size: 1rem;
+          }
+        }
+        .vertical-margin:not(:last-child) {
+          margin-bottom: 20px;
+          @include breakpoint(Sm) {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+  .part-right {
+    position: relative;
+    margin-top: -542px;
+    margin-left: auto;
+    max-width: 50%;
+    min-height: 542px;
+    padding-bottom: 45px;
+    display: flex;
+    @include breakpoint(Lg) {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 0;
+      padding-bottom: 0;
+      min-height: auto;
+    }
+    .col-1 {
+      flex: 0 0 158px;
+      @include breakpoint(Lg) {
+        display: flex;
+        justify-content: flex-end;
+        .quotes-img {
+          display: none;
+        }
+      }
+    }
+    .col-2 {
+      flex: 0 1 187px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .quotes-img {
+        display: none;
+      }
+      @include breakpoint(Lg) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .quotes-img {
+          display: flex;
+          margin-top: 20px;
+        }
+      }
+      @include breakpoint(Sm) {
+        .quotes-img {
+          width: 50px;
+          height: 50px;
+          &:before {
+            content: ",,";
+            transform-origin: center;
+            @include add-font-properties($fontMainHeading, 80px, $color-bg-items-2, $font-bold, 0);
+          }
+        }
+      }
+    }
+    .col-3 {
+      flex: 0 0 248px;
+      display: flex;
+      flex-direction: column;
+      @include breakpoint(Lg) {
+        .additional-img-2,
+        .additional-img-1 {
+          display: none;
+        }
+      }
+    }
+    .col-1,
+    .col-2,
+    .col-3 {
+      @include breakpoint(Lg) {
+        flex: 1 1 auto;
+      }
+    }
+    //=====================clients-imgs
+    .clients-img {
+      opacity: 0.4;
+      transition: opacity 0.7s ease;
+    }
+    .clients-img.active {
+      opacity: 1;
+      transition: opacity 0.7s ease;
+    }
+    .clients-img_1 {
+      width: 158px;
+      height: 158px;
+      margin-top: 25px;
+      @include breakpoint(Lg) {
+        margin-top: 0;
+      }
+    }
+    .clients-img_2 {
+      display: inline-block;
+      width: 108px;
+      height: 108px;
+      margin-right: 0;
+      margin-bottom: 23px;
+      @include breakpoint(Lg) {
+        margin-bottom: 0;
+        margin-top: 23px;
+        width: 158px;
+        height: 158px;
+      }
+    }
+    .clients-img_3 {
+      width: 158px;
+      height: 158px;
+      margin-top: 75px;
+      @include breakpoint(Lg) {
+        margin-top: 0;
+      }
+    }
+    .clients-img_1,
+    .clients-img_2,
+    .clients-img_3 {
+      @include breakpoint(Sm) {
+        width: 90px;
+        height: 90px;
+      }
+    }
+    .clients-img_1,
+    .clients-img_3 {
+      @include breakpoint(Sm) {
+        margin-top: 20px;
+      }
+    }
+    //======================/clients-imgs
+    //==========================additionals images
+    .quotes-img {
+      margin-top: 46px;
+      width: 84px;
+      height: 84px;
+      background-color: $color-secondary;
+      display: flex;
+      justify-content: center;
+      &:before {
+        content: ",,";
+        transform-origin: center;
+        @include add-font-properties($fontMainHeading, 120px, $color-bg-items-2, $font-bold, 0);
+        transform: rotate(0.5turn);
+      }
+    }
+    .additional-img-1 {
+      align-self: flex-end;
+      margin-right: 42px;
+      width: 48px;
+      height: 48px;
+      background: rgba(209, 211, 212, 0.3);
+    }
+    .additional-img-2 {
+      margin-top: 58px;
+      align-self: flex-end;
+      width: 158px;
+      height: 158px;
+      background-color: rgba(0, 201, 148, 0.5);
+    }
+    //==========================/additionals images
+  }
+
+  //========================================
+  .testimonials-clients-slider_wrapper {
+    box-sizing: border-box;
+    max-width: 50%;
+    min-height: 439px;
+    padding-right: 30px;
+    @include breakpoint(Laptop) {
+      max-width: 100%;
+      margin-top: 0;
+      padding-right: 0;
+      min-height: 325px;
+      padding-bottom: 15px;
+    }
+    .testimonials-clients_list-reviews {
+      @include breakpoint(Laptop) {
+        display: flex;
+        justify-content: center;
+      }
+      .testimonials-clients__review {
+        @include breakpoint(Laptop) {
+          max-width: 645px;
+          text-align: center;
+        }
+      }
+      .autor-review {
+        @include heading-Level-3_1;
+      }
+      .autor-position {
+        @include text-items;
+      }
+      .autor-text {
+        @include text-items;
+      }
+      .vertical-margin:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    .testimonials-clients__radio-group_wrapper {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .testimonials-clients__radio-group {
+      margin: 0 -10px;
+      display: flex;
+      .radio-group__item {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .radio {
+        display: none;
+      }
+      .radio + label {
+        cursor: pointer;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-color: $color-bg-items-3;
+      }
+      .radio:checked + label {
+        background-color: $color-secondary;
+      }
+    }
+  }
+  //=======================================================
+  .wrapper-outer {
+    @include innerWrapper;
+    @include sectionMaxSize;
+  }
+  .testimonials-clients-section__heading {
+    .main-subheading__title {
+      margin-bottom: 0;
+    }
+  }
+  .wrapper-inner {
+    padding-top: 13px;
+    position: relative;
+    @include maxWidthSection;
+  }
+  .testimonials-clients-section__text {
+    position: relative;
+    padding-bottom: 43px;
+    max-width: 50%;
+    @include breakpoint(Laptop) {
+      max-width: 100%;
+      padding-bottom: 30px;
+    }
+    h4 {
+      @include text-items-2;
+    }
+  }
+
+}
+//===============================testimonials-info-section
+
+//==========================testimonials-special-section
+.testimonials-special-section {
+  .wrapper-outer {
+    min-height: 100px;
+    padding-bottom: 0;
+  }
+  .home-testimonials-section:last-child {
+    background-color: $color-bg-items-3;
+  }
+}
+//=================================
+

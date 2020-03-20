@@ -1,0 +1,330 @@
+//==============================contactus-header-section
+.contactus-header-section {
+  min-height: 180px;
+  background-color: $color-main;
+  @include breakpoint(Tablet) {
+    min-height: 80px;
+  }
+}
+.contactus-content-section {
+  display: flex;
+  flex-direction: column;
+  //==============================contactus-form-section
+  .contactus-form-section {
+    flex: 1 1 100%;
+    width: 100%;
+    background-color: $color-bg-items-2;
+    @include verticalPad;
+    padding-bottom: 0;
+    @include breakpoint(Tablet) {
+      padding-bottom: 0;
+      padding-top: 100px;
+    }
+  }
+  .wrapper-outer {
+    @include sectionMaxSize;
+    @include innerWrapper;
+    @include breakpoint(Lg2) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  .main-subheading__title {
+    margin-bottom: 0;
+  }
+  .wrapper-inner {
+    position: relative;
+    width: 100%;
+    @include maxWidthSection;
+    padding-top: 33px;
+    padding-bottom: 44px;
+ 
+    @include breakpoint(Tablet) {
+      padding-top: 15px;
+      padding-bottom: 0;   
+    }
+  }
+  
+  .location-wrapper{
+     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 34px;
+    width: 100%;
+    max-width: 1320px;
+    display: flex;
+    @include breakpoint(Tablet){
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+    @include breakpoint(Sm){
+      margin: 30px 0 15px 0;
+    }
+  }
+  .our-post{
+    flex: 0 1 50%;
+    display: flex;
+    align-items: center;
+    margin-left: 55px;
+    @include breakpoint(Lg2){
+      justify-content: flex-end;
+    }
+    @include breakpoint(Tablet){
+      order: 1;
+      flex: 1 1 100%;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+      margin-left: 0;
+    }
+    p{
+      display: inline-block;
+      flex: 0 1 auto;
+      margin-left: 10px;
+      @include add-font-properties($fontItemsHead-1, 1.25rem, $color-text, $font-normal, 1.375rem);
+    }
+  }
+  .our-location {
+    flex: 0 1 50%;
+    p {
+      @include add-font-properties($fontMainText, 1.25rem, $color-text, $font-light, 1.375rem);
+      text-transform: capitalize;
+    }
+    span {
+      @include add-font-properties($fontItemsHead-1, 1.25rem, $color-text, $font-normal, 1.375rem);
+      text-transform: uppercase;
+    }
+    @include breakpoint(Tablet) {
+      flex: 1 1 100%;
+      order: 2;
+    }
+  }
+  .contactus-form-section__form {
+    height: 100%;
+    width: 100%;
+  }
+  .form_wrapper {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    @include breakpoint(Tablet) {
+      flex-wrap: wrap;
+      padding-bottom: 0;
+    }
+  }
+  .privacy-protected {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px 0 30px 0;
+    display: flex;
+
+    p {
+      display: inline-block;
+      @include add-font-properties($fontMainText, 1.125rem, $color-text, $font-light, 1.375rem);
+      color: $color-secondary;
+    }
+    svg{       
+        margin-left: 5px;
+        vertical-align: bottom;
+      }
+  }
+  .column {
+    flex: 0 1 520px;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include breakpoint(Tablet) {
+      padding: 0;
+    }
+  }
+
+  .input-block,
+  .textarea-field {
+    @include breakpoint(Tablet) {
+      margin: 20px 0;
+    }
+  }
+  .contactus-form-section__text {
+    h4 {
+      @include text-items-2;
+      margin-bottom: 30px;
+    }
+  }
+
+  input.form__field {
+    display: inline-block;
+    flex: 1 1 auto;
+    min-height: 40px;
+    padding: 10px 10px 0 10px;
+    width: 100px;
+  }
+
+  .input-block {
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    .input__title.active-title {
+      transform: translateY(150%);
+      width: 0;
+    }
+
+    .check-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform-origin: right;
+        display: inline-block;
+        background-color: $color-item-passive;
+        transform: scale(1);
+        transition: all 0.3s ease;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: scale(0);
+        transform-origin: left;
+        background-color: $color-secondary;
+        transition: all 0.3s ease 0.15s;
+      }
+    }
+    .active-line.check-line:before {
+      transform: scale(1);
+    }
+    .active-line.check-line:after {
+      transform: scale(0);
+    }
+  }
+  //============================================
+  textarea.form__field {
+    display: inline-block;
+    width: 100%;
+    min-height: 80px;
+    border: 1px solid $color-item-passive;
+    padding: 5px;
+    &:focus {
+      border: 1px solid $color-secondary;
+    }
+  }
+  .textarea-field {
+    .input__title {
+      display: block;
+      margin: 8px 0;
+    }
+  }
+  //=======================
+  .input-add-file {
+    margin: 20px 0 0 0;
+    input[type="file"] {
+      outline: 0;
+      opacity: 0;
+      pointer-events: none;
+      user-select: none;
+      width: 100%;
+    }
+    .input-add-file_label {
+      min-width: 100px;
+      max-width: 200px;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-end;
+      &:hover {
+        .material-icon {
+          path{
+            fill: #00C994;
+          }
+        }
+      }
+      .input__title {
+        color: $color-item-passive;
+        flex: 1 0 auto;
+        margin-right: 10px;
+      }
+
+      .input__title.js-value {
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .material-icon {
+       transform: scale(2.1) translateY(-2px);
+      }
+    }
+  }
+  //=======================
+  .input__title {
+    @include add-font-properties($fontMainText, 1.125rem, $color-text, $font-light, 1.375rem);
+    .star {
+      color: $color-secondary;
+    }
+  }
+
+  .form-btn-send {
+    align-self: flex-end;
+    margin-top: -24px;
+    @include breakpoint(Laptop){
+      margin-top: 20px;
+    }
+    @include breakpoint(Tablet) {
+      align-self: center;
+      
+    }
+
+    button {
+      @include btn-main-3;
+      span {
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  .map {
+    background-color: $color-bg-items-2;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  //=========VALIDATION=======
+
+  .error {
+    @include text-items;
+    color: red;
+    font-size: 1rem;
+    margin-left: auto;
+  }
+  // .input-block:before{
+
+  //     background-color: red;
+  // }
+  #clientName-error,
+  #clientEmail-error,
+  #clientContact-error {
+    position: absolute;
+    top: 40px;
+    right: 0;
+  }
+  textarea.form__field.error {
+    border: 1px solid red;
+  }
+
+  input.form__field.valid {
+    color: $color-secondary;
+  }
+  textarea.form__field.valid {
+    border-color: $color-secondary;
+  }
+}

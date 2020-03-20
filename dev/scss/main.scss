@@ -1,0 +1,92 @@
+// IMPORTS UTILS
+@import "./utils/fonts";
+@import "./utils/reset";
+@import "./utils/vars";
+@import "./utils/mixins";
+// /IMPORTS UTILS
+//==============================================
+
+// IMPORTS COMPONENTS
+
+
+
+//----------menu
+@import "./components/menu";
+//----------/menu
+
+//----------buttons
+@import "./components/buttons";
+//----------/buttons
+
+//----------headings
+@import "./components/headings";
+//----------/headings
+
+//----------texts
+@import "./components/texts";
+//----------/texts
+
+//----------cards
+@import "./components/cards";
+//----------/cards
+//----------commons
+@import "./components/commons";
+//----------/commons
+//----------sliders
+@import "./components/sliders";
+//----------/sliders
+
+//----------svg-animation
+@import "./components/svg-animation";
+@import "./components/map-animation";
+//----------/svg-animation
+// /IMPORTS COMPONENTS
+
+//==============================================
+
+// IMPORTS MODULES
+@import "./modules/header";
+@import "./modules/footer";
+@import "./modules/home";
+@import "./modules/aboutUs";
+@import "./modules/contactUs";
+@import "./modules/404";
+@import "./modules/underConstruction";
+@import "./modules/testimonials";
+@import "./modules/howWeWork";
+@import "./modules/services";
+@import "./modules/portfolio";
+// /IMPORTS MODULES
+
+html {
+  font-size: $mainFontSize;
+  font-weight: $font-normal;
+  height: 100%;
+}
+body {
+  position: relative;
+  margin: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+// MAIN CLASSES
+
+.home-content-wrapper,
+.about_us-content-wrapper,
+.contactus-content-wrapper,
+.testimonials-content-wrapper,
+.howWeWork-content-wrapper,
+.services-content-wrapper,
+.portfolio-content-wrapper,
+.services-content-wrapper {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.sbs-team__list{
+  .team__item:not(:last-child){
+    outline: 1px solid black;
+  }
+}

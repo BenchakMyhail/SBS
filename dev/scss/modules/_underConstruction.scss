@@ -1,0 +1,128 @@
+.page-under-construction {
+  background-color: $color-bg-items-2;
+  width: 100%;
+  min-height: 900px;
+  height: 100vh;
+  .page-under-construction__header {
+    background-color: $color-main;
+    min-height: 180px;
+    @include breakpoint(Tablet){
+      min-height: 80px;
+    }
+  }
+  .page-under-construction_wrapper-outer {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 180px);
+    @include breakpoint(Tablet){
+      height: calc(100% - 80px);
+    }
+  }
+  .line-grd {
+    position: absolute;
+    top: 371px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 142px;
+    // transform: translateY(100%);
+    background: repeating-linear-gradient(
+      315deg,
+      rgba(255, 206, 43, 0.2),
+      rgba(255, 206, 43, 0.2) 75px,
+      rgba(0, 0, 0, 0.2) 75px,
+      rgba(0, 0, 0, 0.2) 150px
+    );
+    filter: blur(10px);
+    @include breakpoint(Tablet){
+      top: 340px;
+      height: 100px;
+      background: repeating-linear-gradient(
+        315deg,
+        rgba(255, 206, 43, 0.2),
+        rgba(255, 206, 43, 0.2) 35px,
+        rgba(0, 0, 0, 0.2) 35px,
+        rgba(0, 0, 0, 0.2) 70px
+      );
+    }
+    @include breakpoint(Sm){
+      top: 320px;
+      height: 80px;
+      background: repeating-linear-gradient(
+        315deg,
+        rgba(255, 206, 43, 0.2),
+        rgba(255, 206, 43, 0.2) 20px,
+        rgba(0, 0, 0, 0.2) 20px,
+        rgba(0, 0, 0, 0.2) 40px
+      );
+      filter: blur(0);
+    }
+
+  }
+  .page-under-construction_container {
+    position: relative;
+    min-height: calc(100% + 180px);
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    // align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: $layer-fourth;
+    @include breakpoint(Tablet){
+      min-height: calc(100% + 80px);
+    }
+    .title {
+        flex: 0 1 100%;
+      @include add-font-properties($fontMainText, 4rem, $color-secondary, $font-light, 5rem);
+      text-transform: uppercase;
+      margin-top: 76px;
+      margin-bottom: 34px;
+      @include breakpoint(Tablet){
+        margin-top: 50px;
+      margin-bottom: 20px;
+        font-size: 3rem;
+        line-height: 3.5rem;
+      }
+      @include breakpoint(Sm){
+        font-size: 2.5rem;
+        line-height: 3rem;
+      }
+    }
+    .page-img {
+      flex: 1 1 auto;
+      width: 100%;
+    }
+    .description-text {
+        flex: 1 1 100%;
+      @include add-font-properties($fontMainHeading, 4rem, $color-main, $font-bold, 5rem);
+    @include breakpoint(Tablet){
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+    @include breakpoint(Sm){
+      font-size: 2.3rem;
+      line-height: 3rem;
+    }
+    }
+    .page-under-construction__btn {
+        flex: 1 1 100%;
+      a {
+        @include btn-main-2;
+      }
+    }
+    .page-under-construction__info-copyright {
+        margin-bottom: 10px;
+        flex: 1 1 100%;
+        align-self: flex-end;
+      p {
+        @include add-font-properties($fontMainText, 1rem, $color-main, $font-light, 1.3rem);
+      }
+    }
+  }
+}

@@ -1,0 +1,173 @@
+//---------------------btn-main
+@mixin btn-main {
+  display: inline-block;
+  background-color: transparent;
+  @include add-font-properties($fontMainText, 1.25rem, $color-bg-items-2, $font-light, 1.5rem);
+  text-transform: uppercase;
+ border: 1px solid $color-secondary;
+  color: $color-secondary;
+  cursor: pointer;
+  padding: 12px 40px;
+  transition: all 0.3s linear;
+  min-width: 240px;
+  text-align: center;
+  &:hover {
+    color: $color-bg-items-2;
+    text-decoration: none;
+  }
+}
+@mixin btn-main-1 {
+  display: inline-block;
+  background-color: transparent;
+  @include add-font-properties($fontMainText, 1.25rem, $color-bg-items-2, $font-light, 1.5rem);
+  text-transform: uppercase;
+ border: 1px solid $color-bg-items-2;
+  cursor: pointer;
+  padding: 12px 40px;
+  transition: all 0.3s linear;
+  &:hover {
+    border: 1px solid $color-secondary;
+    color: $color-secondary;
+    background-color: $color-bg-items-2;
+    text-decoration: none;
+  }
+}
+@mixin btn-main-2 {
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: $color-secondary;
+  text-align: center;
+  border: 1px solid transparent;
+  min-width: 240px;
+  @include add-font-properties($fontMainText, 1.25rem, $color-bg-items-2, $font-light, 1.5rem);
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 12px 40px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  &:hover {
+    border: 1px solid $color-secondary;
+    color: $color-main;
+    // box-shadow: inset 0 0 10px 0 $color-secondary;
+    background-color: $color-bg-items-2;
+  }
+}
+@mixin btn-main-3 {
+  display: inline-block;
+  background-color: transparent;
+  @include add-font-properties($fontMainText, 1.25rem, $color-secondary, $font-light, 1.5rem);
+  text-transform: uppercase;
+ border: 1px solid $color-secondary;
+ min-width: 240px;
+  cursor: pointer;
+  padding: 12px 40px;
+  transition: all 0.3s linear;
+  &:hover {
+    color: $color-main;
+    text-decoration: none;
+  }
+}
+@mixin btn-main-4 {
+  display: inline-block;
+  background-color: transparent;
+  @include add-font-properties($fontMainText, 1.25rem, $color-secondary, $font-light, 1.5rem);
+  text-transform: uppercase;
+  border: 1px solid $color-secondary;
+  min-width: 240px;
+  cursor: pointer;
+  padding: 12px 40px;
+  transition: all 0.3s linear;
+  &:hover {
+    color: $color-main;
+  }
+}
+//-------------------------
+.btn-see-more {
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  margin-right: 47px;
+  padding: 0;
+  @include add-font-properties($fontMainText, 1.25rem, $color-text, $font-light, 1.5rem);
+  span {
+    position: absolute;
+    bottom: 5px;
+    right: -47px;
+    height: 1px;
+    width: 40px;
+    background-color: $color-text;
+    transition: all 0.5s ease;
+    &::after,
+    &::before {
+      position: absolute;
+      right: 0;
+      content: "";
+      height: 1px;
+      width: 5px;
+      background-color: inherit;
+    }
+    &::after {
+      bottom: 2px;
+      transform: rotate(45deg);
+    }
+    &::before {
+      bottom: -2px;
+      transform: rotate(-45deg);
+    }
+  }
+  transition: all 0.3s ease;
+  &:hover {
+    color: $color-secondary;
+    span {
+      right: -57px;
+      width: 50px;
+      background-color: $color-secondary;
+    }
+  }
+}
+.btn-view-project {
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  margin-right: 47px;
+  padding: 0;
+  @include add-font-properties($fontMainText, 1.25rem, $color-bg-items-2, $font-light, 1.5rem);
+  span {
+    position: absolute;
+    bottom: 5px;
+    right: -47px;
+    height: 1px;
+    width: 40px;
+    background-color: $color-bg-items-2;
+    transition: all 0.3s ease;
+    &::after,
+    &::before {
+      position: absolute;
+      right: 0;
+      content: "";
+      height: 1px;
+      width: 5px;
+      background-color: inherit;
+    }
+    &::after {
+      bottom: 2px;
+      transform: rotate(45deg);
+    }
+    &::before {
+      bottom: -2px;
+      transform: rotate(-45deg);
+    }
+  }
+  transition: all 0.3s ease;
+  &:hover {
+    color: $color-secondary;
+    span {
+      right: -57px;
+      width: 50px;
+      background-color: $color-secondary;
+    }
+  }
+}
+
+

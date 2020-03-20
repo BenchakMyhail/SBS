@@ -1,0 +1,181 @@
+// SIZE MIXINS
+@mixin maxWidthSection{
+  max-width: 1320px;
+    margin: 0 auto;
+}
+@mixin verticalPad {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  @include breakpoint(Tablet){
+    padding-top: 50px;
+  padding-bottom: 50px;
+  }
+}
+@mixin sectionMaxSize {
+  width: 100%;
+  max-width: 1720px;
+  margin: 0 auto;
+}
+@mixin outWrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@mixin innerWrapper {
+  padding-left: 72px;
+  padding-right: 72px;
+  @include breakpoint(Lg){
+    padding-left: 15px;
+  padding-right: 15px;
+  }
+
+}
+// MIXIN ADD FONT PROPERTIES
+@mixin add-font-properties($fam: false, $size: false, $colour: false, $weight: false, $lh: false) {
+  @if $fam {
+    font-family: $fam, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+  }
+  @if $size {
+    font-size: $size;
+  }
+  @if $colour {
+    color: $colour;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+//====================================================
+
+// MIXINS HEADINGS AND ANY TITLE
+
+@mixin heading-H-1 {
+  @include add-font-properties($additionalFont, 5rem, $colorTextMain-1, $font-black, 5.625rem);
+}
+
+@mixin heading-H-3 {
+  @include add-font-properties($additionalFont, 1.5rem, $colorTextMain-1, $font-black, 1.5rem);
+  text-transform: capitalize;
+}
+//====================================================
+
+// BREAKPOINTS MIXIN
+@mixin breakpoint($point) {
+  @if $point == extraSm {
+    @media (max-width: 500px) {
+      @content;
+    }
+  }
+  @if $point == Sm {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $point == Tablet {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $point == Laptop {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if $point == Laptop2 {
+    @media (max-width: 1050px) {
+      @content;
+    }
+  } @else if $point == Lg {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  } @else if $point == Lg2 {
+    @media (max-width: 1350px) {
+      @content;
+    }
+  } @else if $point == extraLarge {
+    @media (max-width: 1700px) {
+      @content;
+    }
+  }
+
+  @if $point == mobileLarge {
+    @media all and (min-width: 500px) {
+      @content;
+    }
+  }
+}
+//====================================================
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root("::-webkit-input-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root(":-moz-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root("::-moz-placeholder") {
+    @content;
+  }
+
+  @include optional-at-root(":-ms-input-placeholder") {
+    @content;
+  }
+}
+// BUTTON MIXINS
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+@mixin button-header {
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  border: 2px solid $colorFormTry-1;
+  border-radius: 4px;
+  height: 40px;
+  width: 110px;
+  @include add-font-properties($itemsFont, 1rem, $colorFormTry-1, $font-semibold, 1.5rem);
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: $colorFormTry-1;
+    color: $colorTextMain-1;
+  }
+}
+@mixin button-header-form {
+  @include button-reset;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: $colorBtn-1;
+  @include add-font-properties($additionalFont, 0.875rem, $colorTextMain-1, $font-black, 1.5rem);
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  box-shadow: 0 10px 20px rgba(176, 58, 101, 0.35);
+  &:hover {
+    background-color: $colorTextMain-1;
+    color: $colorFormTry-1;
+    border: 2px solid $colorFormTry-1;
+  }
+}
+//====================================================
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }
+}

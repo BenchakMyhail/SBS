@@ -1,0 +1,401 @@
+//========================================portfolio-header-section
+.portfolio-header-section {
+  position: relative;
+  min-height: 600px;
+}
+
+//============================portfolio-section
+
+.portfolio-section {
+  background-color: $color-bg-items-2;
+  @include innerWrapper;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include breakpoint(Tablet) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .wrapper-outer {
+    @include maxWidthSection;
+    position: relative;
+    display: flex;
+    @include breakpoint(Laptop) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .wrapper-inner {
+    flex: 0 1 50%;
+    @include breakpoint(Laptop) {
+      flex: 0 1 100%;
+    }
+  }
+
+  .wrapper-left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrapper-right {
+    flex: 0 1 700px;
+    display: flex;
+    max-height: 470px;
+    justify-content: flex-end;
+    @include breakpoint(Laptop) {
+      margin-top: 20px;
+      justify-content: center;
+    }
+  }
+
+  .portfolio-section_heading {
+    display: flex;
+    align-items: center;
+    padding: 60px 0 30px 0;
+    @include breakpoint(Laptop) {
+      padding: 0 0 15px 0;
+    }
+
+    img {
+      flex: 0 0 40px;
+      height: 40px;
+    }
+  }
+
+  .portfolio-heading {
+    margin-left: 20px;
+    @include add-font-properties($fontItemsHead-1, 2.25rem, $color-text, $font-normal, 2.25rem);
+    text-transform: uppercase;
+    @include breakpoint(Tablet) {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+  }
+
+  .btn-wrapper {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    @include breakpoint(Laptop) {
+      justify-content: center;
+    }
+  }
+
+  .btn-portfolio {
+    text-align: center;
+    @include btn-main-3;
+  }
+
+  .portfolio-text {
+    margin-top: 30px;
+    flex: 0 1 110px;
+    max-width: 550px;
+    padding-bottom: 15px;
+
+    p {
+      @include text-items-2;
+    }
+  }
+}
+.portfolio-section.up-section {
+  padding-top: 0;
+  @include breakpoint(Tablet) {
+    padding-top: 0;
+  }
+}
+.portfolio-section,
+.portfolio-case-head {
+  .path-index {
+    @include maxWidthSection;
+    top: 0;
+    min-height: 100px;
+    position: relative;
+    display: flex;
+    padding-top: 32px;
+  }
+}
+//============================portfolio-section reverse
+.portfolio-section.reverse {
+  background-color: $color-bg-items-3;
+
+  .wrapper-outer {
+    flex-direction: row-reverse;
+  }
+
+  .wrapper-left {
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .portfolio-section_heading {
+    flex-direction: row-reverse;
+  }
+.portfolio-heading{
+  margin-left: 0;
+  margin-right: 20px;
+}
+  .wrapper-right {
+    justify-content: flex-start;
+    @include breakpoint(Laptop) {
+      justify-content: center;
+    }
+  }
+
+  .btn-wrapper {
+    justify-content: flex-end;
+    @include breakpoint(Laptop) {
+      justify-content: center;
+    }
+  }
+}
+
+//===========================portfolio-case-section
+.portfolio-header-case {
+  background-color: $color-main;
+  width: 100%;
+  min-height: 180px;
+  @include breakpoint(Tablet) {
+    min-height: 80px;
+  }
+}
+
+.portfolio-content-wrapper {
+  background-color: $color-bg-items-2;
+}
+
+.portfolio-headings {
+  @include text-items-2;
+}
+
+.portfolio-headings-2 {
+  @include text-items-2;
+  font-weight: $font-bold;
+}
+
+.portfolio-text {
+  @include text-items;
+}
+.item-decor {
+  display: flex;
+  margin-bottom: 34px;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    flex: 0 0 16px;
+    height: 16px;
+    background-color: $color-secondary;
+    margin-right: 16px;
+  }
+}
+.portfolio-case-head {
+  @include innerWrapper;
+  @include sectionMaxSize;
+  .wrapper-outer {
+    @include maxWidthSection;
+  }
+  .wrapper-inner {
+    max-width: 1288px;
+    margin-left: auto;
+    margin-top: 30px;
+    .portfolio-text {
+      margin-top: 30px;
+    }
+  }
+  .done-list {
+    padding: 35px 0 0 0;
+    max-width: 1162px;
+    margin-left: auto;
+    .list-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px;
+    }
+    .portfolio-item {
+      flex: 0 1 394px;
+      padding: 0 10px;
+      p {
+        line-height: 1.125rem;
+      }
+    }
+  }
+}
+//=============================
+.portfolio-case-presentation {
+  position: relative;
+  @include innerWrapper;
+  .portfolio-case-section__bg {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    width: 100%;
+    @include breakpoint(Lg2) {
+      display: none;
+    }
+  }
+  .wrapper-outer {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .portfolio-case-section__img {
+    position: relative;
+    max-width: 100%;
+    z-index: 10;
+  }
+}
+.portfolio-case-presentation.top {
+  margin-top: 35px;
+}
+//======================================
+.project-link-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 70px 0;
+  .project-link {
+    @include btn-main-3;
+    font-size: 20px;
+    text-align: center;
+    text-transform: lowercase;
+    color: #000000;
+  }
+}
+.givetivity-content {
+  .home-testimonials-section .autor-text {
+    max-width: 520px;
+  }
+  .portfolio-case-section__bg {
+    top: 120px;
+  }
+  .sbs-contact-us-section {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+}
+.dualsosh-content {
+  .portfolio-case-head .wrapper-inner:first-child {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .portfolio-case-presentation.top {
+    .portfolio-case-section__bg {
+      top: 450px;
+    }
+  }
+  .sbs-contact-us-section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .portfolio-case-presentation.down {
+    min-height: 1180px;
+    display: flex;
+    .wrapper-outer {
+      align-self: flex-end;
+    }
+  }
+}
+.memscore-content {
+  .portfolio-case-head .wrapper-inner:first-child {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .portfolio-text {
+    max-width: 825px;
+  }
+  .portfolio-case-presentation.top {
+    .portfolio-case-section__bg {
+      top: 350px;
+    }
+  }
+  .portfolio-case-presentation.down {
+    margin-bottom: 70px;
+  }
+}
+.energy-solutions-content {
+  .portfolio-case-presentation.top {
+    .portfolio-case-section__bg {
+      top: 400px;
+    }
+  }
+  .wrapper-outer .portfolio-text {
+    max-width: 825px;
+  }
+  .wrapper-inner .portfolio-text {
+    max-width: 750px;
+  }
+  .portfolio-case-presentation.down {
+    margin-bottom: 70px;
+  }
+  .project-link-wrapper .project-link {
+    padding: 12px 20px;
+    @include breakpoint(Sm) {
+      font-size: 1rem;
+    }
+  }
+}
+.doing-boon-content {
+  .portfolio-case-presentation.top {
+    margin-top: 0;
+    .portfolio-case-section__bg {
+      top: -50px;
+    }
+    .wrapper-outer {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .portfolio-case-section__img.top {
+      margin-top: 80px;
+    }
+    .portfolio-case-section__img.down {
+      margin-top: 100px;
+    }
+  }
+  .project-link-wrapper .project-link {
+    border: none;
+    padding: 0;
+  }
+}
+.mybubblz-content {
+  .wrapper-inner {
+    .portfolio-headings-2.top {
+      margin-bottom: 30px;
+    }
+  }
+  .portfolio-case-head {
+    position: relative;
+  }
+  .portfolio-case-presentation.top {
+    position: absolute;
+    top: 60px;
+    right: 128px;
+    @media (max-width: 1450px){
+      right: 0;
+    }
+    @include breakpoint(Lg2) {
+      position: relative;
+      top: 0;
+      .wrapper-outer {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  .wrapper-outer {
+    .portfolio-text,
+    .portfolio-headings-2 {
+      max-width: 762px;
+    }
+  }
+  .portfolio-case-presentation.down {
+    margin-top: 200px;
+    @include breakpoint(Lg2) {
+      margin-top: 30px;
+    }
+  }
+  .project-link-wrapper .project-link {
+    border: none;
+    padding: 0;
+  }
+}

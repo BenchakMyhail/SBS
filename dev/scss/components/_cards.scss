@@ -1,0 +1,140 @@
+//-----------------------------------
+.step-by-step__list {
+  display: flex;
+  flex-direction: column-reverse;
+  .step-by-step__item:nth-child(2) {
+    margin-left: 200px;
+  }
+  .step-by-step__item:nth-child(3) {
+    margin-left: 400px;
+  }
+  .step-by-step__item:nth-child(4) {
+    margin-left: 600px;
+  }
+  @include breakpoint(Lg2) {
+    .step-by-step__item:nth-child(2) {
+      margin-left: 150px;
+    }
+    .step-by-step__item:nth-child(3) {
+      margin-left: 300px;
+    }
+    .step-by-step__item:nth-child(4) {
+      margin-left: 450px;
+    }
+  }
+  @include breakpoint(Lg) {
+    flex-direction: column;
+
+    .step-by-step__item:nth-child(2) {
+      margin-left: 0;
+    }
+    .step-by-step__item:nth-child(3) {
+      margin-left: 0;
+    }
+    .step-by-step__item:nth-child(4) {
+      margin-left: 0;
+    }
+  }
+
+  .step-by-step__item {
+    display: flex;
+    opacity: 0;
+    @include breakpoint(Lg) {
+      padding: 10px 0;
+    }
+    @include breakpoint(Tablet) {
+      padding: 21px 0;
+    }
+    &:hover {
+      .step-number {
+        background-color: $color-secondary;
+        .word,
+        .num {
+          color: $color-bg-items-2;
+        }
+      }
+      .step-by-step_inner-wrapper {
+        .step-title {
+          color: $color-secondary;
+        }
+      }
+    }
+  }
+  .step-number {
+    flex: 0 0 200px;
+    height: 200px;
+    background-color: $color-bg-items-3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    @include breakpoint(Lg2) {
+      flex: 0 0 150px;
+      height: 150px;
+      padding: 10px;
+    }
+    @include breakpoint(Tablet) {
+      padding: 5px;
+      flex: 0 0 117px;
+      height: 117px;
+    }
+  }
+  .word {
+    @include add-font-properties($fontMainHeading, 4rem, $color-item-passive, $font-bold, 3.5rem);
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    @include breakpoint(Lg2) {
+      font-size: 2.5rem;
+      line-height: 2.7rem;
+    }
+    @include breakpoint(Tablet) {
+      font-size: 1.875rem;
+      line-height: 2.1875rem;
+    }
+  }
+  .num {
+    @include add-font-properties($fontAddText, 7.5rem, $color-item-passive, $font-ex-light, 6.875rem);
+    transition: all 0.5s ease;
+    @include breakpoint(Lg2) {
+      font-size: 5rem;
+      line-height: 5.2rem;
+    }
+    @include breakpoint(Tablet) {
+      font-size: 4.5rem;
+      line-height: 4.5rem;
+    }
+  }
+  .step-by-step_inner-wrapper {
+    padding-top: 30px;
+    margin-left: 30px;
+    flex: 0 0 370px;
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(Lg2) {
+      padding-top: 0;
+      flex: 0 1 500px;
+      margin-left: 20px;
+    }
+    @include breakpoint(Tablet) {
+      flex: 0 1 auto;
+      margin-left: 12px;
+    }
+  }
+  .step-title {
+    margin-bottom: 15px;
+    @include heading-Level-3_1;
+    text-transform: uppercase;
+    @include breakpoint(Lg2) {
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+    @include breakpoint(Sm) {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+  }
+  .step-text {
+    @include text-items;
+  }
+}

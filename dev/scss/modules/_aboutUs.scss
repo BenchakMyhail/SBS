@@ -1,0 +1,294 @@
+//==============================about_us-header-section
+.aboutus-header-section {
+  position: relative;
+  min-height: 600px;
+
+}
+//==============================aboutus-ourstory-section
+.aboutus-ourstory-section {
+  background-color: $color-bg-items-2;
+  @include verticalPad;
+  padding-bottom: 70px;
+  @include breakpoint(Tablet) {
+    padding-top: 100px;
+  }
+  .wrapper-outer {
+    position: relative;
+    @include innerWrapper;
+    @include sectionMaxSize;
+  }
+
+  .main-subheading__title {
+    margin-bottom: 0;
+  }
+
+  .wrapper-inner {
+    position: relative;
+    padding-top: 13px;
+    @include maxWidthSection;
+  }
+  .ourstory-heading {
+    @include text-items-2;
+    margin-bottom: 30px;
+    @include breakpoint(Tablet) {
+      margin-bottom: 15px;
+    }
+  }
+  .aboutus-ourstory-section__text {
+    margin-top: 12px;
+    column-count: 2;
+    column-gap: 30px;
+    @include breakpoint(Tablet) {
+      column-count: 1;
+    }
+    p {
+      @include text-items;
+    }
+  }
+  .aboutus-ourstory-section__text > p:first-child {
+    text-indent: 1rem;
+  }
+}
+//==============================aboutus-values-section
+.aboutus-values-section {  
+  position: relative;
+  .about-us_slideshow {
+    will-change: scroll-position;
+    overflow: hidden;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 33, 99, 0.7);
+    }
+    @include breakpoint(Lg) {
+      display: none;
+    }
+  }
+  .about-us_slideshow.active{
+    animation: moveSlideshow 30s linear infinite both;
+  }
+  @keyframes moveSlideshow {
+    100% {
+      background-position: -2150px 0;
+    }
+  }
+  .bg-wrapper{    
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 33, 99, 0.7);
+    }
+    @media (min-width: 1199.98px){
+      display: none;
+    } 
+  }
+  .wrapper-outer {
+    min-height: 500px;
+    position: relative;
+    @include sectionMaxSize;
+    @include innerWrapper;
+    @include verticalPad;
+    padding-bottom: 58px;
+    z-index: 3;
+  }
+  .main-subheading__title {
+    @include heading-Level-2-reverse;
+    color: $color-bg-items-2;
+  }
+  .wrapper-inner {
+   padding-top: 42px;
+    @include maxWidthSection;
+  }
+  .list-item {
+    display: flex;
+    margin: 0 -30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (max-width:1400px){
+      margin: 0;
+    }
+  
+  }
+  .aboutus-values_item {
+    flex: 0 0 33.333%;
+    padding: 0 30px 30px 30px;
+    @media (max-width:1400px){
+      padding: 0;
+    }
+    @include breakpoint(Lg) {
+      flex: 0 1 400px;
+      padding: 20px 20px 20px 20px;
+    }
+    @include breakpoint(Sm) {
+      padding: 8px 0 8px 0;
+    }
+    .item-wrapper {
+      border: 1px solid $color-item-passive;
+      min-height: 160px;
+      display: flex;
+      align-items: center;
+      padding: 30px 20px;
+      @media (max-width:1400px){
+        padding: 0;
+      }    
+    }
+    .item-icon{
+      flex: 0 0 auto;
+    }
+    .title-item {
+      margin-left: 10px;
+      @include add-font-properties($fontMainHeading, 1.875rem, $color-bg-items-2, $font-bold, 1.875rem);
+      text-transform: uppercase;
+      @include breakpoint(Sm) {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+//==============================aboutus-geography-section
+.aboutus-geography-section {
+  @include verticalPad;
+  background-color: $color-bg-items-2;
+  .wrapper-outer {
+    @include sectionMaxSize;
+    @include innerWrapper;
+  }
+  .main-subheading__title {
+    @include heading-Level-2-reverse;
+    margin-bottom: 20px;
+  }
+  .aboutus-geography__content_wrapper {
+    @include maxWidthSection;
+    display: flex;
+    flex-direction: column;
+    .aboutus-geography__content-text {
+      align-self: flex-end;
+      max-width: 645px;
+      flex: 0 1 auto;
+      text-align: right;
+      @include text-items;
+    }
+    .aboutus-geography__map {
+      flex: 1 1 100%;
+      margin-top: 50px;
+    }
+  }
+}
+//======================================================
+.sbs-team-section {
+  @include verticalPad;
+
+  .wrapper-outer {
+    @include sectionMaxSize;
+    @include innerWrapper;
+  }
+  .wrapper-inner {
+    @include maxWidthSection;
+  }
+  .sbs-team__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .team__item {
+    position: relative;
+    flex: 0 0 330px;
+    background-size: cover;
+    background-position: center;
+    padding-top: 330px;
+    cursor: pointer;
+    @include breakpoint(Lg) {
+      flex: 0 0 300px;
+      padding-top: 300px;
+    }
+    @include breakpoint(Laptop) {
+      flex: 0 0 240px;
+      padding-top: 240px;
+    }
+    @include breakpoint(Tablet) {
+      flex: 0 0 145px;
+      padding-top: 145px;
+    }
+    &:hover .team-text {
+      opacity: 1;
+    }
+  }
+  .team__item:last-child {
+    cursor: unset;
+    padding-top: 0;
+  }
+  .team-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    background: rgba(0, 33, 99, 0.7);
+    transition: 0.3s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p {
+      @include add-font-properties($fontItemsHead-1, 1.125rem, $color-bg-items-2, $font-normal, 1.375rem);
+      text-transform: capitalize;
+    }
+    h3 {
+      padding-top: 20px;
+      @include add-font-properties($fontMainText, 1.125rem, $color-bg-items-2, $font-light, 1.375rem);
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+  }
+  .sbs-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    .team-logo {
+      display: inline-block;
+      max-width: 100%;
+      margin: 15px 0;
+      @include breakpoint(Tablet) {
+        margin: 5px 0;
+      }
+    }
+    p:first-child {
+      padding-top: 15px;
+    }
+    p {
+      @include add-font-properties($fontMainText, 1.5rem, $color-text, $font-light, 1.8125rem);
+      text-transform: uppercase;
+      span {
+        font-size: 2.25rem;
+        line-height: 2.6875rem;
+      }
+      @include breakpoint(Tablet) {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        span {
+          font-size: 1.5rem;
+          line-height: 1.75rem;
+        }
+      }
+    }
+  }
+}

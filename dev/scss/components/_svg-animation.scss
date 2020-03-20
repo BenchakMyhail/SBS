@@ -1,0 +1,486 @@
+//++++++++++++home-industies-section_content
+#home-industries {
+  .home-industies-section__item {
+    .img-wrap {
+      transition: opacity 0.1s ease;
+    }
+    .img-base {
+      transition: transform 0.2s ease;
+      transform-origin: 50% 50%;
+    }
+    .img-move {
+      transition: transform 0.2s ease;
+    }
+    #img-circle-arrow {
+      transition: transform 1.2s ease;
+      transform-origin: 26px 31px;
+    }
+  }
+
+  .home-industies-section__item:hover {
+    .img-wrap {
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+    .img-base {
+      transition: transform 0.5s ease;
+      transform: scale(1.5, 1.5);
+      #img-circle-arrow {
+        animation-name: rotate-self;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+    }
+    .img-car {
+      transform: translateY(4px);
+    }
+    .img-fintech {
+      transform: translateY(10px);
+    }
+    .img-media {
+      transform: translateY(11px);
+    }
+    .img-move {
+      animation-name: spaceboots;
+      animation-duration: 1.5s;
+      transform-origin: 50% 50%;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    .img-pulse {
+      animation-name: pulse;
+      animation-duration: 1.5s;
+      transform-origin: 50% 50%;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    .img-hand {
+      animation-name: hand-moving;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    .img-play {
+      animation-name: play;
+      animation-duration: 2s;
+      animation-delay: 2s;
+      transform-origin: 28px 28px;
+      animation-timing-function: linear;
+    }
+    .img-togglers > path:nth-child(odd) {
+      animation-name: gorizontal-moving-2;
+      animation-duration: 2.5s;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+    .img-togglers > path:nth-child(even) {
+      animation-name: gorizontal-moving-2;
+      animation-duration: 2.5s;
+      animation-delay: 0.2s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+  }
+}
+//++++++++++++++++++home-services-section
+.step-content_wrapper,
+.home-services-section {
+  .home-services-section__item {
+    .img-wrap {
+      transition: all 0.5s ease;
+      transform-origin: 50% 50%;
+    }
+    .img-base {
+      transition: transform 0.2s ease;
+      transform-origin: 50% 50%;
+    }
+  }
+  .step-content:hover,
+  .home-services-section__item:hover {
+    .img-wrap {
+      transition: transform 0.5s ease;
+    }
+    .img-btn {
+      animation-name: color-change-2;
+      animation-duration: 0.5s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+    #img-doc > path {
+      opacity: 0;
+    }
+    #img-doc path:nth-child(1) {
+      animation-name: element-opacity;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+    #img-doc path:nth-child(2) {
+      animation-name: element-opacity;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+    #img-doc path:nth-child(3) {
+      animation-name: element-opacity;
+      animation-duration: 0.2s;
+      animation-delay: .5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+    #img-doc path:nth-child(5) {
+      animation-name: element-opacity;
+      animation-duration: 0.2s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+    #img-doc path:nth-child(4) {
+      animation-name: element-opacity;
+      animation-duration: 0.2s;
+      animation-delay: 1.5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+    //=============================================
+    #img-phone-lay {
+      visibility: hidden;
+    }
+    #img-phone-stay {
+      transform: translateX(-25%);
+
+      #img-wheel {
+        transform-origin: 65.5px 39.5px;
+        animation-name: rotate-self;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+    }
+    //================================================
+    #img-success {
+      transform: translateX(16px);
+      animation-name: element-opacity-2;
+      animation-duration: .5s;
+      animation-timing-function: linear;
+    }
+    #img-clock {
+      opacity: 0;
+      animation: .5s ease-in-out 0s normal forwards 1 element-opacity;
+      animation-delay: .5s;
+    }
+    #img-lines {
+      transform: translateX(-10px);
+    }
+    #img-lines > path:nth-child(odd) {
+      animation-name: gorizontal-moving;
+      animation-duration: .5s;
+      //animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+    #img-lines > path:nth-child(even) {
+      animation-name: gorizontal-moving;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+    .up-move {
+      transform: translateY(-5px);
+    }
+    #img-pen {
+      transform-origin: 40px 60px;
+      animation-name: pen-way;
+      animation-duration: .5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+    #final-picture {
+      .right-part,
+      .left-part {
+        transform: scaleX(0);
+        animation-name: img-grow;
+        animation-duration: .5s;
+        animation-delay: .5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+      }
+      .left-part {
+        transform-origin: 45%;
+      }
+      .right-part {
+        transform-origin: 55%;
+      }
+    }
+    @keyframes img-grow {
+      0% {
+        transform: scaleX(0);
+      }
+      100% {
+        transform: scaleX(1);
+      }
+    }
+    #img-process > path:nth-child(odd) {
+      animation-name: gorizontal-moving-2;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+    #img-process > path:nth-child(even) {
+      animation-name: gorizontal-moving-2;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+    #text-group > .img-text {
+      opacity: 0;
+    }
+
+    #text-group .img-text:nth-child(1) {
+      animation-name: element-opacity;
+      animation-duration: 0.2s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+    #text-group .img-text:nth-child(2) {
+      animation-name: element-opacity;
+      animation-duration: 0.2s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+    #text-group .img-text:nth-child(3) {
+      animation-name: element-opacity;
+      animation-duration: 0.2s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+    }
+  }
+}
+.home-technologies-section {
+  .home-technologies-section__item {
+    .icon {
+      transition: all 0.5s ease;
+    }
+    .icon:hover {
+      transform: scale(0.8, 0.8);
+    }
+  }
+}
+//++++++++++++++++KEYFRAMES
+@keyframes change-color {
+  0% {
+    fill: black;
+  }
+  100% {
+    fill: #00c994;
+  }
+}
+@keyframes pen-way {
+  0% {
+    transform: translateY(0) scale(0.85, 0.85);
+  }
+  49% {
+    transform: translateY(2px) scale(0.85, 0.85);
+  }
+  50% {
+    transform: translateY(2px) scale(0.85, 0.85);
+  }
+  75% {
+    transform: translateY(4px) scale(0.85, 0.85);
+  }
+  100% {
+    transform: translateY(0) scale(0.85, 0.85);
+  }
+}
+@keyframes gorizontal-moving-2 {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-1px);
+  }
+  40% {
+    transform: translateX(1px);
+  }
+  60% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(-1px);
+  }
+  100% {
+    transform: translate(1px);
+  }
+}
+@keyframes gorizontal-moving-2 {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-1px);
+  }
+  40% {
+    transform: translateX(1px);
+  }
+  60% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(-1px);
+  }
+  100% {
+    transform: translate(1px);
+  }
+}
+@keyframes gorizontal-moving {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-1px);
+  }
+  40% {
+    transform: translateX(1px);
+  }
+  60% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(-1px);
+  }
+  99% {
+    transform: translate(1px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes element-opacity-2 {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes element-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes color-change-2 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: #00c994;
+  }
+}
+@keyframes color-change {
+  0% {
+    fill: #00c994;
+  }
+  1% {
+    fill: red;
+  }
+}
+@keyframes play {
+  0% {
+    transform: scale(1, 1);
+  }
+  15% {
+    transform: scale(0.9, 0.9);
+  }
+  30% {
+    transform: scale(1, 1);
+  }
+  31% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hand-moving {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateY(-3px);
+  }
+  60% {
+    transform: translateX(6px);
+  }
+  80% {
+    transform: translate(0px, 1px);
+  }
+  100% {
+    transform: translate(1px, 0);
+  }
+}
+@keyframes spaceboots {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(0, -1px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-1px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(0px, 1px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, 0) rotate(1deg);
+  }
+  50% {
+    transform: translate(0, 1px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-1px, 0) rotate(0deg);
+  }
+  70% {
+    transform: translate(1px, 0) rotate(-1deg);
+  }
+  80% {
+    transform: translate(0, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -1px) rotate(-1deg);
+  }
+}
+@keyframes rotate-self {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1) translateY(10px);
+  }
+  50% {
+    transform: scale(1.1, 1.1) translateY(10px);
+  }
+  100% {
+    transform: scale(1, 1) translateY(10px);
+  }
+}

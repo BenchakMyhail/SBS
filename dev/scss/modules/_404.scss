@@ -1,0 +1,80 @@
+.page-404 {
+  background-color: $color-main;
+  width: 100%;
+  min-height: 1080px;
+  height: 100vh;
+  padding-top: 180px;
+  @include breakpoint(Tablet){
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+  .page-404_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 97px;
+    @include breakpoint(Laptop){
+        padding-top: 0;        
+    }
+  }
+  .page-404__message {
+    flex: 0 1 450px;
+    width: 100%;
+    max-width: 1011px;
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @include breakpoint(Sm){
+        flex: 0 1 350px;
+    }
+  }
+  .attention-text {
+    @include add-font-properties($fontMainHeading, 4rem, $color-secondary, $font-bold, 5rem);
+    text-transform: uppercase;
+    @include breakpoint(Tablet){
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+  }
+  .description-text {
+    @include add-font-properties($fontItemsHead-1, 1.25rem, $color-bg-items-2, $font-normal, 2.9375rem);
+    text-transform: uppercase;
+    @include breakpoint(Tablet){
+        margin-top: 15px;
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+  }
+  .page-404__btn {
+    flex: 0 1 auto;
+    // margin-top: 114px;
+    a {
+      @include btn-main-2;
+    }
+  }
+  .page-404__info-copyright {
+    flex: 0 1 auto;
+    margin-bottom: 10px;
+    text-align: center;
+    @include breakpoint(Tablet){
+        margin-top: 30px;
+    }
+    p {
+      @include add-font-properties($fontMainText, 1rem, $color-bg-items-2, $font-light, 1.3rem);
+    }
+  }
+}
